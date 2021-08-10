@@ -1,6 +1,6 @@
 # django-simple-blog
 
-Features:
+<strong>Features:</strong>
 - User Registration
 - Login Logout Authentication
 - Profile with image upload/update

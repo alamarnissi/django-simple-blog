@@ -1,0 +1,15 @@
+{% extends "blog/layouts/main.html" %}
+
+{% block content %}
+    {% for post in posts %}
+        <div class="card" style="width: 18rem;">
+            <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+            <div class="card-body">
+                <h5 class="card-title">{{ post.title }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted text-xs">Post by : {{ post.author }} created at: {{ post.date_create|date:"F d, Y" }}</h6>
+                <p class="card-text">{{ post.content|truncatewords:12 }}</p>
+                <a href="{% url 'single-post' post.slug %}" class="btn btn-primary">See More</a>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
